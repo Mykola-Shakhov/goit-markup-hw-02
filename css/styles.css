@@ -52,8 +52,7 @@ body{
     align-items: center;
    }
 
-.logo-blue,
-.logo-black{
+.logo-blue{
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
@@ -63,7 +62,7 @@ body{
     color: var(--accent-color);
     text-decoration-line: none;
 }
-.logo-black {    
+.logo-black{    
     color: var(--logo-text-color);
 }
 
