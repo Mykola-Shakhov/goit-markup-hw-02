@@ -1,34 +1,63 @@
 
 :root {
+/* =============colors=============== */
+
     --text-color:#212121;
     --alt-text-color:#757575;
-    --logo-text-color:#000;
+    --logo-text-color:#000000;
     --accent-color:#2196f3;
-    --light-color:#fff;
+    --alt-accent-color:#188ce8;
+    --light-color:#ffffff;
     --alt-light-color:rgba(255,255,255,0.6);
     --alt-background-color:#f5f4fa;
     --dark-background-color:#2f303a;
     --border-color:#ececec;
-    --alt-border-color:#eee;
-    }
-body {  
-     /* убрать  */
-    background-color:var(--alt-text-color);  
+    --alt-border-color:#eeeeee;
+    --hero-btn-shad:rgba(0, 0, 0, 0.15);
+    --hover-color:#e5e5e5;
+/* ===========font-weights=========== */
 
+    --item-title-weight: 500;
+    --item-text-weight: 400;
+    --hero-title-weight: 900;
+    --hero-button-weight: 700;
+    --section-title-weight: 700;
+    }
+
+.body { 
+    background: var(--light-color); 
     font-family: "Roboto",sans-serif;
     font-style: normal;
+    }
+.main {
+    border-top-color: var(--border-color);
+    border-top-style: solid;
+    border-width: thin;
     }
 .bordering {
     width: 1170px;
     margin: auto;
     }
 .no-dot {
-    list-style: none;    
+    list-style: none;
+    margin-left: -40px;    
     }
 .link {
     text-decoration-line: none;
     }
-/* =========header==================== */
+.section {
+    /* font-family: "Roboto", sans-serif; */
+    font-weight: var(--hero-title-weight);
+    font-size: 14px;
+    color: var(--alt-text-color);
+    letter-spacing: 0.03em;
+    }
+.item-box {
+    width: 270px;
+    /* font-family: "Roboto", sans-serif; */
+}   
+
+/* ===========Header================= */
 .header {
     background-color: var(--light-color);
     padding-top: 25px;
@@ -63,47 +92,255 @@ body {
 .menu-list{
     display: flex;
     }
-.menu-item + .menu-item{
+.menu-list > .menu-item + .menu-item{
     margin-left: 50px;
     }
 .menu-link{
     color: var(--text-color)
     }
-.menu-link:hover,
-.menu-link:focus{
-    color: var(--accent-color);
-    }
-.contacts-item {
-    margin-right: 50px;
+/* .contacts {} */
+
+.contacts .menu-link {
     color: var(--alt-text-color);
     }
-.contacts-link {
-color: var(--alt-text-color);
-    }
-.contacts-link:hover,
-.contacts-link:focus{
+.header .menu-link:hover,
+.header .menu-link:focus,
+.header .current{
     color: var(--accent-color);
 }
 /* ==========End of Header=========== */
 
 
 
+/* ======= Main of index.html ===== */
+/* --------Section Hero------------- */
+.hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-color: var(--dark-background-color);
+    text-align: center;
+    }
+.hero > .bordering {
+    width: 695px;
+    margin: auto;
+    }
+.hero-title {
+    font-family: 'Roboto' sans-serif;
+    font-weight:var(--hero-title-weight);
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--light-color);
+    /* margin-bottom: 30px; */
+    }
+.hero-button{
+    width: 200px;
+    height: 50px;
+    font-weight: var(--hero-button-weight);
+    font-size: 16px;
+    font-weight: 1.88;
+    background-color:var(--accent-color);
+    border: none;
+    color: var(--light-color);
+    padding: 10px 32px;
+    cursor: pointer;
+    border-radius: 4px;
+    align-items: center;
+    text-align: center;
+    }
+.hero-button:hover,
+.hero-button:focus
+    {
+    align-items: center;
+    text-align: center;
+    background-color: var(--alt-accent-color);
+    box-shadow: 0px 4px 4px var(--hero-btn-shad);
+    cursor: pointer;
+    }
+/*---------Our Advantages---------- */
+.advantages {
+    padding-top: 95px;
+    }
+.advantages > .hide-title,
+.projects > .hide-title {
+    display: none;
+    }
+.advantages .menu-item + .menu-item{
+    margin-left: 30px;
+    }
+.advantages .item-box{
+    width: 270px;
+    } 
+.advantages h3 {
+    font-weight: var(--section-title-weight);
+    line-height: 1.17;
+    color: var(--text-color);
+    text-transform: uppercase;
+    }
+.advantages p {
+    font-weight: var(--item-text-weight);
+    line-height: 1.71;   
+    }
+/* --------------What We Do------------- */
+.what-we-do {
+    padding-top: 95px;
+    padding-bottom: 95px;    
+    }
+.what-we-do h2 {  
+    font-weight: var(--section-title-weight);
+    font-size: 36;
+    line-height: 1.17;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 50px;
+    }
+.what-we-do .item-box{
+    width: 370px;
+    }
+.what-we-do .menu-item + .menu-item {
+    display:list-item ;
+    margin-left: 30px;
+    }
+/* --------------Our Team---------------------- */
+.our-team {
+    padding-top: 95px;
+    padding-bottom: 95px;
+    background-color: var(--alt-background-color);
+    }
+.our-team h2 {
+    font-weight: var(--section-title-weight);
+    font-size: 36;
+    line-height: 1.17;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 50px;
+    }
+.our-team .menu-item + .menu-item {
+    display: list-item;
+    margin-left: 30px;
+    }
+.our-team .item-box {
+    text-align: center;
+    background: var(--light-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;      
+    }
+.our-team h3{
+    font-weight:var(--section-title-weight);
+    font-size: 16px;
+    line-height: 1.88;
+    color: var(--text-color);    
+    text-align: center;
+    letter-spacing: 0.03em;
+    }
+.our-team p {
+    font-weight: var(--item-text-weight);
+    font-size: 16px;
+    line-height: 1.17;
+    color: var(--alt-text-color);
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+/* ========= Main of portfolio ============ */
+
+
+
+.projects {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    }
+.projects-nav > .bordering {
+    width: 610px;
+    margin: auto;
+    }
+.projects .no-dot{
+    margin-left: -20px;
+    }
+/* ------------ menu ------------*/
+.projects .menu-list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    }
+.menu-list > .projects-item +.projects-item {
+    margin-left: 8px;
+    }
+.projects .nav-box {
+    align-items: flex-start;
+    padding: 6px 22px;  
+    border: none;
+    height: 38px;
+    font-weight:var(--item-title-weight);
+    line-height: 1.66;
+    background: var(--alt-background-color);
+    border-radius: 4px;
+    color: var(--text-color);
+    }
+.nav-box:hover,
+.nav-box:focus,
+.projects .current {
+    background: var(--accent-color);
+    color: var(--light-color);
+    }
+/*----------- End of menu -----------------*/
+
+.projects >.bordering {
+    width: 1200px;
+    margin: auto;
+    }
+.projects .projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    }
+
+.projects .menu-item {
+    width: 390px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    justify-content: space-between;
+    }
+.projects .item-box {
+    width: 368px;
+    border: 1px solid var(--alt-border-color);    
+    }
+.projects h3 {
+    font-weight: var(--item-title-weight);
+    font-size: 18px;
+    line-height: 2.00;
+    color: var(--text-color);
+    position: relative;
+    letter-spacing: 0.06em;
+    margin-left: 24px;
+    }
+.projects p {
+    font-weight: var(--item-text-weight);
+    font-size: 16px;
+    line-height: 1.88;
+    color: var(--alt-text-color);
+    text-align: left;
+    letter-spacing: 0.03em;
+    margin-left: 24px;
+}
 /*============Footer=================== */
 .footer {
-    background-color: var(--dark-background-color);
+    background: var(--dark-background-color);
     padding-top: 60px;
-    padding-bottom: 60px;
-    
+    padding-bottom: 60px;    
     }
 .footer-logo > a {
     color: var(--light-color);
     margin-bottom: 20px;
     }
+.footer .no-dot{
+    margin-left: 0px;
+    }
 .address-list {
     padding: 0px;
     font-style: normal;
     }
-.address-item + .address-item{
+.address-item + .address-item {
     margin-top: 10px;
     }
 .address-item:first-child .address-link {
@@ -112,7 +349,6 @@ color: var(--alt-text-color);
 .address-list .address-link {
     color: var(--alt-light-color);
     }
-
 .address-list .address-link:hover,
 .address-list .address-link:focus {
     color: var(--accent-color);
