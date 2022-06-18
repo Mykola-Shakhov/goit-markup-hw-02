@@ -46,15 +46,13 @@
     text-decoration-line: none;
     }
 .section {
-    /* font-family: "Roboto", sans-serif; */
     font-weight: var(--hero-title-weight);
     font-size: 14px;
     color: var(--alt-text-color);
     letter-spacing: 0.03em;
     }
 .item-box {
-    width: 270px;
-    /* font-family: "Roboto", sans-serif; */
+    width: 270px; 
 }   
 
 /* ===========Header================= */
@@ -72,7 +70,7 @@
     display: flex;
     align-items: center;
     }
-.logo {
+.logo-font {
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
@@ -96,10 +94,12 @@
     margin-left: 50px;
     }
 .menu-link{
-    color: var(--text-color)
+    font-weight:var(--item-title-weight);
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--text-color);
     }
-/* .contacts {} */
-
 .contacts .menu-link {
     color: var(--alt-text-color);
     }
@@ -132,7 +132,6 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--light-color);
-    /* margin-bottom: 30px; */
     }
 .hero-button{
     width: 200px;
@@ -245,18 +244,14 @@
 
 /* ========= Main of portfolio ============ */
 
-
-
 .projects {
     padding-top: 94px;
     padding-bottom: 94px;
     }
-.projects-nav > .bordering {
+.projects > .projects-nav {
     width: 610px;
-    margin: auto;
-    }
-.projects .no-dot{
-    margin-left: -20px;
+    margin-left: auto;
+    margin-right: auto;
     }
 /* ------------ menu ------------*/
 .projects .menu-list {
@@ -272,6 +267,7 @@
     padding: 6px 22px;  
     border: none;
     height: 38px;
+    cursor: pointer;
     font-weight:var(--item-title-weight);
     line-height: 1.66;
     background: var(--alt-background-color);
@@ -286,23 +282,22 @@
     }
 /*----------- End of menu -----------------*/
 
-.projects >.bordering {
-    width: 1200px;
+.projects .bordering {
+    width: 1230px;
     margin: auto;
     }
-.projects .projects-list {
+.bordering > .projects-list {
     display: flex;
     flex-wrap: wrap;
     }
-
 .projects .menu-item {
-    width: 390px;
-    padding-right: 30px;
+    width: 400px;
+    padding-left: 30px;
     padding-bottom: 30px;
     justify-content: space-between;
     }
 .projects .item-box {
-    width: 368px;
+    width: 370px;
     border: 1px solid var(--alt-border-color);    
     }
 .projects h3 {
