@@ -29,11 +29,6 @@
     font-family: "Roboto",sans-serif;
     font-style: normal;
     }
-.main {
-    border-top-color: var(--border-color);
-    border-top-style: solid;
-    border-width: thin;
-    }
 .bordering {
     width: 1170px;
     margin: auto;
@@ -72,7 +67,6 @@
     }
 .logo-font {
     font-family: 'Raleway';
-    font-style: normal;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.17;
@@ -133,20 +127,20 @@
     text-transform: uppercase;
     color: var(--light-color);
     }
-.hero-button{
+.hero .hero-button{
     width: 200px;
     height: 50px;
     font-weight: var(--hero-button-weight);
     font-size: 16px;
-    font-weight: 1.88;
+    line-height:  1.87;
+    letter-spacing: 0.06em;
     background-color:var(--accent-color);
     border: none;
     color: var(--light-color);
-    padding: 10px 32px;
     cursor: pointer;
     border-radius: 4px;
     align-items: center;
-    text-align: center;
+    text-align: center;  
     }
 .hero-button:hover,
 .hero-button:focus
@@ -161,9 +155,20 @@
 .advantages {
     padding-top: 95px;
     }
-.advantages > .hide-title,
-.projects > .hide-title {
-    display: none;
+.main > .advantages > .hide-title,
+.main > .projects > .hide-title {
+    /* Семантичне приховування елементів */
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+    /* display: none; */
     }
 .advantages .menu-item + .menu-item{
     margin-left: 30px;
@@ -174,21 +179,23 @@
 .advantages h3 {
     font-weight: var(--section-title-weight);
     line-height: 1.17;
+    letter-spacing: 0.03em;
     color: var(--text-color);
     text-transform: uppercase;
     }
 .advantages p {
     font-weight: var(--item-text-weight);
-    line-height: 1.71;   
+    line-height: 1.71;
+    letter-spacing: 0.03em;
     }
 /* --------------What We Do------------- */
 .what-we-do {
     padding-top: 95px;
     padding-bottom: 95px;    
     }
-.what-we-do h2 {  
+.studio h2 {  
     font-weight: var(--section-title-weight);
-    font-size: 36;
+    font-size: 36px;
     line-height: 1.17;
     color: var(--text-color);
     text-align: center;
@@ -206,15 +213,7 @@
     padding-top: 95px;
     padding-bottom: 95px;
     background-color: var(--alt-background-color);
-    }
-.our-team h2 {
-    font-weight: var(--section-title-weight);
-    font-size: 36;
-    line-height: 1.17;
-    color: var(--text-color);
-    text-align: center;
-    margin-bottom: 50px;
-    }
+    } 
 .our-team .menu-item + .menu-item {
     display: list-item;
     margin-left: 30px;
@@ -244,6 +243,11 @@
 
 /* ========= Main of portfolio ============ */
 
+.portfolio {
+    border-top-color: var(--border-color);
+    border-top-style: solid;
+    border-width: thin;
+    }
 .projects {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -273,6 +277,7 @@
     background: var(--alt-background-color);
     border-radius: 4px;
     color: var(--text-color);
+    letter-spacing: 0.03em;
     }
 .nav-box:hover,
 .nav-box:focus,
@@ -300,7 +305,7 @@
     width: 370px;
     border: 1px solid var(--alt-border-color);    
     }
-.projects h3 {
+.portfolio h2 {
     font-weight: var(--item-title-weight);
     font-size: 18px;
     line-height: 2.00;
