@@ -27,7 +27,6 @@
 .body { 
     background: var(--light-color); 
     font-family: "Roboto",sans-serif;
-    font-style: normal;
     }
 .bordering {
     width: 1170px;
@@ -127,7 +126,7 @@
     text-transform: uppercase;
     color: var(--light-color);
     }
-.hero .hero-button{
+.hero .hero-button {
     width: 200px;
     height: 50px;
     font-weight: var(--hero-button-weight);
@@ -138,13 +137,11 @@
     border: none;
     color: var(--light-color);
     cursor: pointer;
-    border-radius: 4px;
-    align-items: center;
-    text-align: center;  
+    border-radius: 4px;     
+    padding: 10px 32px 10px 31px;
     }
 .hero-button:hover,
-.hero-button:focus
-    {
+.hero-button:focus {
     align-items: center;
     text-align: center;
     background-color: var(--alt-accent-color);
@@ -170,7 +167,7 @@
     margin: -1px;
     /* display: none; */
     }
-.advantages .menu-item + .menu-item{
+.advantages .menu-item + .menu-item {
     margin-left: 30px;
     }
 .advantages .item-box{
@@ -201,7 +198,7 @@
     text-align: center;
     margin-bottom: 50px;
     }
-.what-we-do .item-box{
+.what-we-do .item-box {
     width: 370px;
     }
 .what-we-do .menu-item + .menu-item {
@@ -224,7 +221,7 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;      
     }
-.our-team h3{
+.our-team h3 {
     font-weight:var(--section-title-weight);
     font-size: 16px;
     line-height: 1.88;
